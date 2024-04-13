@@ -1,14 +1,15 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import { StyleSheet, Text, View } from 'react-native';
 
-const RootLayout = () => {
+function RootLayout() {
   return (
     <View style={styles.container}>
       <Text>Root layout</Text>
     </View>
-  )
+  );
 }
 
 export default RootLayout;
 
-const styles = StyleSheet.create({ container: { justifyContent: 'center', alignItems: 'center' } });
+const styles = StyleSheet.create({
+  container: { justifyContent: 'center', alignItems: 'center' },
+});
