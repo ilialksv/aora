@@ -27,6 +27,8 @@
         "react-hooks/exhaustive-deps": 1,
         "react/react-in-jsx-scope": 0,
         "react/style-prop-object": 0,
-        "no-use-before-define": 0
+        "no-use-before-define": 0,
+        "no-unused-vars": 2,
+        "react/jsx-fragments": 0
     }
 }
