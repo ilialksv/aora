@@ -37,7 +37,7 @@ export default function Onboarding() {
             exloration with Aora
           </Text>
           <CustomButton
-            title="Heeeeeeey"
+            title="Continue with email"
             containerClassName="w-full mt-7"
             handlePress={() => router.push("/sign-in")}
           />
