@@ -34,6 +34,7 @@
         "no-use-before-define": 0,
         "no-unused-vars": 2,
         "func-names": 0,
-        "global-require": 0
+        "global-require": 0,
+        "import/prefer-default-export": 0
     }
 }

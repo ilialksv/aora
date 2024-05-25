@@ -22,9 +22,8 @@ export default function FormField({
           className="flex-1 text-white font-psemibold text-base w-full h-full"
           placeholder={placeholder}
           value={value}
+          onChangeText={handleChange}
           placeholderTextColor="#7b7b8b"
-          onChange={handleChange}
-          ke
           secureTextEntry={title === "Password" && !showPassword}
           {...props}
         />
