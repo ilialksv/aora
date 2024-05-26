@@ -6,7 +6,7 @@ import { images } from "../constants";
 
 function EmptyState({ title, subtitle }) {
   return (
-    <View className="flex justify-center w-full items-center px-4">
+    <View className="flex justify-center w-full items-center px-4 pb-10">
       <Image
         source={images.empty}
         resizeMode="contain"
