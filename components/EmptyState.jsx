@@ -19,7 +19,7 @@ function EmptyState({ title, subtitle }) {
       </Text>
 
       <CustomButton
-        title="Back to Explore"
+        title="Обратно"
         handlePress={() => router.push("/home")}
         containerClassName="w-full mt-5"
       />

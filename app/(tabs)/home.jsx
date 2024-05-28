@@ -50,7 +50,7 @@ function Home() {
             <View className="flex justify-between items-start flex-row mb-6">
               <View>
                 <Text className="font-pmedium text-sm text-gray-100">
-                  Welcome Back,
+                  Добро пожаловать,
                 </Text>
                 <Text className="text-2xl font-psemibold text-white">
                   {user?.username}
@@ -70,7 +70,7 @@ function Home() {
 
             <View className="w-full flex-1 pt-5 pb-8">
               <Text className="text-lg font-pregular text-gray-100 mb-3">
-                Latest Videos
+                Последние видео
               </Text>
 
               <Trending posts={latestPosts ?? []} />
@@ -79,8 +79,8 @@ function Home() {
         )}
         ListEmptyComponent={() => (
           <EmptyState
-            title="No Videos Found"
-            subtitle="No videos created yet"
+            title="Не найдено видео"
+            subtitle="Пока еще не было загружено ни одного видео"
           />
         )}
         refreshControl={

@@ -53,7 +53,7 @@ function Create() {
       }
     } else {
       setTimeout(() => {
-        Alert.alert("Document picked", JSON.stringify(result, null, 2));
+        Alert.alert("Документ выбран", JSON.stringify(result, null, 2));
       }, 100);
     }
   };
@@ -66,7 +66,7 @@ function Create() {
       !form.thumbnail ||
       !form.video
     ) {
-      return Alert.alert("Please provide all fields");
+      return Alert.alert("Заполните все поля");
     }
 
     setUploading(true);
@@ -76,10 +76,10 @@ function Create() {
         userId: user.$id,
       });
 
-      Alert.alert("Success", "Post uploaded successfully");
+      Alert.alert("Успех", "Видео было успешно добавлено");
       router.push("/home");
     } catch (error) {
-      Alert.alert("Error", error.message);
+      Alert.alert("Ошибка", error.message);
     } finally {
       setForm({
         title: "",
@@ -95,19 +95,21 @@ function Create() {
   return (
     <SafeAreaView className="bg-primary h-full">
       <ScrollView className="px-4 my-6">
-        <Text className="text-2xl text-white font-psemibold">Upload Video</Text>
+        <Text className="text-2xl text-white font-psemibold">
+          Загрузить видео
+        </Text>
 
         <FormField
-          title="Video Title"
+          title="Заголовок видео"
           value={form.title}
-          placeholder="Give your video a catchy title..."
+          placeholder="Крутой заголовок..."
           handleChange={(e) => setForm({ ...form, title: e })}
           wrapperClassName="mt-10"
         />
 
         <View className="mt-7 space-y-2">
           <Text className="text-base text-gray-100 font-pmedium">
-            Upload Video
+            Загрузить видео
           </Text>
 
           <TouchableOpacity onPress={() => openPicker("video")}>
@@ -135,7 +137,7 @@ function Create() {
 
         <View className="mt-7 space-y-2">
           <Text className="text-base text-gray-100 font-pmedium">
-            Thumbnail Image
+            Обложка видео
           </Text>
 
           <TouchableOpacity onPress={() => openPicker("image")}>
@@ -154,7 +156,7 @@ function Create() {
                   className="w-5 h-5"
                 />
                 <Text className="text-sm text-gray-100 font-pmedium">
-                  Choose a file
+                  Выбрать файл
                 </Text>
               </View>
             )}
@@ -162,15 +164,15 @@ function Create() {
         </View>
 
         <FormField
-          title="AI Prompt"
+          title="ИИ промпт"
           value={form.prompt}
-          placeholder="The AI prompt of your video...."
+          placeholder="ИИ промпт, который использовался для генерации"
           handleChange={(e) => setForm({ ...form, prompt: e })}
           wrapperClassName="mt-7"
         />
 
         <CustomButton
-          title="Submit & Publish"
+          title="Опубликовать"
           handlePress={submit}
           containerClassName="mt-7"
           isLoading={uploading}

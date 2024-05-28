@@ -36,8 +36,8 @@ function Profile() {
         )}
         ListEmptyComponent={() => (
           <EmptyState
-            title="No Videos Found"
-            subtitle="No videos found for this profile"
+            title="Не найдено видео"
+            subtitle="Вы не загрузили еще ни одного видео"
           />
         )}
         ListHeaderComponent={() => (

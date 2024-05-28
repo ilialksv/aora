@@ -40,13 +40,13 @@ export default function TabsLayout() {
       <Tabs.Screen
         name="home"
         options={{
-          title: "Home",
+          title: "Главная",
           headerShown: false,
           tabBarIcon: ({ color, focused }) => (
             <TabIcon
               icon={icons.home}
               color={color}
-              name="Home"
+              name="Главная"
               focused={focused}
             />
           ),
@@ -55,13 +55,13 @@ export default function TabsLayout() {
       <Tabs.Screen
         name="create"
         options={{
-          title: "Create",
+          title: "Загрузить",
           headerShown: false,
           tabBarIcon: ({ color, focused }) => (
             <TabIcon
               icon={icons.plus}
               color={color}
-              name="Create"
+              name="Загрузить"
               focused={focused}
             />
           ),
@@ -70,13 +70,28 @@ export default function TabsLayout() {
       <Tabs.Screen
         name="profile"
         options={{
-          title: "Profile",
+          title: "Профиль",
           headerShown: false,
           tabBarIcon: ({ color, focused }) => (
             <TabIcon
               icon={icons.profile}
               color={color}
-              name="Profile"
+              name="Профиль"
+              focused={focused}
+            />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="info"
+        options={{
+          title: "Информация",
+          headerShown: false,
+          tabBarIcon: ({ color, focused }) => (
+            <TabIcon
+              icon={icons.info}
+              color={color}
+              name="Информация"
               focused={focused}
             />
           ),

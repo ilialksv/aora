@@ -30,7 +30,7 @@ export default function Onboarding() {
           />
           <View className="ralative mt-5">
             <Text className="text-3xl font-bold text-white text-center">
-              Discover Endless Possibilities with{" "}
+              Откройте для себя бесконечные возможности с помощью{" "}
               <Text className="text-secondary-200">Aora</Text>
             </Text>
             <Image
@@ -40,8 +40,8 @@ export default function Onboarding() {
             />
           </View>
           <Text className="text-sm font-pregular text-gray-100 mt-7 text-center">
-            Where creativity meets innovation: embark on a journey of limitless
-            exloration with Aora
+            Там, где креативность сочетается с инновациями: отправляйтесь в
+            путешествие безграничных возможностей вместе с Aora
           </Text>
           <CustomButton
             title="Continue with email"

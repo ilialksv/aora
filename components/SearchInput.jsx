@@ -13,7 +13,7 @@ function SearchInput({ initialQuery }) {
       <TextInput
         className="text-base mt-0.5 text-white flex-1 font-pregular"
         value={query}
-        placeholder="Search a video topic"
+        placeholder="Поиск видео..."
         placeholderTextColor="#CDCDE0"
         onChangeText={(e) => setQuery(e)}
       />
@@ -23,8 +23,8 @@ function SearchInput({ initialQuery }) {
         onPress={() => {
           if (query === "")
             return Alert.alert(
-              "Missing Query",
-              "Please input something to search results across database",
+              "Не указаны параметры поиска",
+              "Введите слово для поиска",
             );
 
           if (pathname.startsWith("/search")) router.setParams({ query });

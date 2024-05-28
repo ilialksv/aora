@@ -32,7 +32,7 @@ function Search() {
         ListHeaderComponent={() => (
           <View className="flex my-6 px-4">
             <Text className="font-pmedium text-gray-100 text-sm">
-              Search Results
+              Результаты поиска
             </Text>
             <Text className="text-2xl font-psemibold text-white mt-1">
               {query}
@@ -45,8 +45,8 @@ function Search() {
         )}
         ListEmptyComponent={() => (
           <EmptyState
-            title="No Videos Found"
-            subtitle="No videos found for this search query"
+            title="Видео не найдено"
+            subtitle="Не найдено ни одного видео по заданным параметрам"
           />
         )}
       />
