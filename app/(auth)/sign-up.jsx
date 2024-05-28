@@ -21,7 +21,7 @@ export default function SignUp() {
 
   const onSubmit = async () => {
     if (!form.email || !form.password || !form.username) {
-      Alert.alert("Error", "Please fill in all the fields");
+      Alert.alert("Ошибка", "Пожалуйста, заполните все поля");
     } else {
       setIsSubmitting(true);
 
@@ -37,7 +37,7 @@ export default function SignUp() {
 
         router.replace("/home");
       } catch (error) {
-        Alert.alert("Error", error.message);
+        Alert.alert("Ошибка", error.message);
       } finally {
         setIsSubmitting(false);
       }
@@ -54,11 +54,11 @@ export default function SignUp() {
             className="w-[115px] h-[35px]"
           />
           <Text className="text-2xl text-white font-semibold mt-10">
-            Sign Up to Aora
+            Регистрация в Aora
           </Text>
           <FormField
-            title="Username"
-            placeholder="Enter your username"
+            title="Имя пользователя"
+            placeholder="Введите имя пользователя"
             value={form.username}
             wrapperClassName="mt-10"
             handleChange={(value) => setForm({ ...form, username: value })}
@@ -66,21 +66,21 @@ export default function SignUp() {
           <FormField
             type="email"
             title="Email"
-            placeholder="Enter your email"
+            placeholder="Введите вашу почту"
             value={form.email}
             wrapperClassName="mt-7"
             keyboardType="email-address"
             handleChange={(value) => setForm({ ...form, email: value })}
           />
           <FormField
-            title="Password"
-            placeholder="Enter your password"
+            title="Пароль"
+            placeholder="Введите ваш пароль"
             value={form.password}
             wrapperClassName="mt-7"
             handleChange={(value) => setForm({ ...form, password: value })}
           />
           <CustomButton
-            title="Sign Up"
+            title="Зарегистрироваться"
             containerClassName="mt-7"
             isLoading={isSubmitting}
             handlePress={onSubmit}
@@ -88,13 +88,13 @@ export default function SignUp() {
 
           <View className="justify-center pt-5 flex-row gap-2">
             <Text className="text-lg text-gray-100 font-pregular">
-              Already have an account?
+              Уже есть аккаунт?
             </Text>
             <Link
               href="/sign-in"
               className="text-lg font-psemibold text-secondary-100"
             >
-              Sign in
+              Войти
             </Link>
           </View>
         </View>

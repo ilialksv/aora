@@ -6,8 +6,8 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import CustomButton from "../../components/CustomButton";
 import FormField from "../../components/FormField";
 import { images } from "../../constants";
-import { getCurrentUser, signIn } from "../../lib/appwrite";
 import { useGlobalContext } from "../../context/GlobalProvider";
+import { getCurrentUser, signIn } from "../../lib/appwrite";
 
 export default function SignIn() {
   const { setUser, setIsLoggedIn } = useGlobalContext();
@@ -21,7 +21,7 @@ export default function SignIn() {
   const onSubmit = async () => {
     if (!form.email || !form.password) {
       console.log(form);
-      Alert.alert("Error", "Please fill in all the fields");
+      Alert.alert("Ошибка", "Пожалуйста, заполните все поля");
     } else {
       setIsSubmitting(true);
 
@@ -33,10 +33,10 @@ export default function SignIn() {
         setUser(result);
         setIsLoggedIn(true);
 
-        Alert.alert("Success", "User signed in successfully");
+        Alert.alert("Успех", "Аутентификация прошла успешно");
         router.replace("/home");
       } catch (error) {
-        Alert.alert("Error", error.message);
+        Alert.alert("Ошибка", error.message);
       } finally {
         setIsSubmitting(false);
       }
@@ -58,20 +58,20 @@ export default function SignIn() {
           <FormField
             type="email"
             title="Email"
-            placeholder="Enter your email"
+            placeholder="Введите вашу почту"
             value={form.email}
             wrapperClassName="mt-7"
             handleChange={(value) => setForm({ ...form, email: value })}
           />
           <FormField
-            title="Password"
-            placeholder="Enter your password"
+            title="Пароль"
+            placeholder="Введите ваш пароль"
             value={form.password}
             wrapperClassName="mt-7"
             handleChange={(value) => setForm({ ...form, password: value })}
           />
           <CustomButton
-            title="Login"
+            title="Логин"
             containerClassName="mt-7"
             isLoading={isSubmitting}
             handlePress={onSubmit}
@@ -79,13 +79,13 @@ export default function SignIn() {
 
           <View className="justify-center pt-5 flex-row gap-2">
             <Text className="text-lg text-gray-100 font-pregular">
-              Don&apos;t have an account?
+              Еще нет аккаунта?
             </Text>
             <Link
               href="/sign-up"
               className="text-lg font-psemibold text-secondary-100"
             >
-              Sign up
+              Зарегистрироваться
             </Link>
           </View>
         </View>

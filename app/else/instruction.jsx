@@ -1,7 +1,7 @@
 import { Text } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-function About() {
+function Instruction() {
   return (
     <SafeAreaView className="bg-primary h-full py-12">
       <Text className="text-white text-xl px-5">
@@ -21,4 +21,4 @@ function About() {
   );
 }
 
-export default About;
+export default Instruction;
